@@ -49,3 +49,8 @@ douyu = {
         "pgcnt": 6
     }
 }
+rl_list=douyu['data']['rl']
+for rl in rl_list:
+    nn=rl['nn']
+    rs1=rl['rs1']
+    print(nn,rs1)
