@@ -5,6 +5,10 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/15_虚拟环境/project1/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/15_虚拟环境/project2/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Note1数据类型/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Note2计算和控制流/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Note3基本扩展模块/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Note4高级特性/.venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (Project3)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
