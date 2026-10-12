@@ -9,6 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Note2计算和控制流/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/Note3基本扩展模块/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/Note4高级特性/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Note5高级特性与高级拓展模块/.venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (Project3)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
