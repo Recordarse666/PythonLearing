@@ -11,21 +11,16 @@
 # 导入模块
 #   import
 #   from - import
-
-
+import time,math,random
 # 精确导入
-
-
+from time import sleep as sl
+sl(3)
 # 模糊导入 : * 表示所有内容
-
-
-
-
+from time import *
 # 自定义模块
-
-
-
-# 别名: as 改名后只能用别名
+from package1 import module1
+print(module1.name)
+# 别名 as 改名后只能用别名
 
 
 

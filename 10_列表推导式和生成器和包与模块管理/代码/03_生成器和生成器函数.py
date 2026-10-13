@@ -21,6 +21,7 @@ for i in g:
 #   4. yield 会暂停, 可以返回值
 def fn():
     print("1111111111")
+    print("22222222222")
     yield 666 #类似于return，但是不会结束函数，每个next会在yield处暂停，下一个next会到下一个yield
 #fn()无法直接而调用，变成了一个生成器函数，返回了一个参数
 g=fn()

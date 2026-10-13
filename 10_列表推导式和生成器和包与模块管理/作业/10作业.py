@@ -9,9 +9,46 @@
 #   F:相加D与E的天数，得到总天数。
 #   G:用总天数来计算输入月的第一天的星期数
 #   H:根据G的值，格式化输出这个月的日历!
+def fa():
+    year=int(input("请输入年："))
+    month=int(input("请输入月："))
+    fh(year,month)
+def fb(year):
+    return (year%4==0 and year%100!=0) or (year%400==0)
 
+def fc(year,month):
+    if month==2:
+        return 29 if fb(year) else 28
+    elif month in [4,6,9,11]:
+        return 30
+    elif month in [1,3,5,7,8,10,12]:
+        return 31
+    return 0
 
-
-
+def fd(year):
+    s=0
+    for i in range(1900, year):
+        s+=366 if fb(i) else 365
+    return s
+def fe(year, month):
+    sum=0
+    for i in range(1,month):
+        sum+=fc(year,i)
+    return sum
+def ff(year,month):
+    return fe(year,month)+fd(year)
+def fg(year,month):
+    return ff(year,month)%7
+def fh(year,month):
+    week=fg(year,month)
+    print(week)
+    print("一","二","三","四","五","六","日",sep="\t")
+    for i in range(week):
+        print(" ",end='\t')
+    for i in range(1,fc(year,month)+1):
+        print(i,end="\t")
+        if (i+week)%7==0:
+            print()
+fa()
 # 2.请写一个生成器函数,生成一个无限序列,从1开始可以不断往后取值,每次+1
 #    提示:使用while True, 通过调用n次next来获取前n个数
