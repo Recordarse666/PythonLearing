@@ -2,8 +2,10 @@ import time
 
 
 # time模块
-#   time.time()  # 当前时间
-#   time.sleep() # 暂停,休眠, 单位:秒
+#   time.time()  # 当前时间！！！！！！！！！！！！！！！！！！！
+#   time.sleep() # 暂停,休眠, 单位:秒！！！！！！！！！！！！！!
+
+
 # 当前时间, 时间戳timestamp:从1970年1月1日0点到现在所经过的秒
 # 1s = 1000ms 毫秒
 # 1ms = 1000us 微秒
@@ -12,14 +14,20 @@ import time
 
 
 # datetime: 日期时间,
-#   对time做了封装,比time更好用
+#   对time做了封装,比time更好用!!!!!!!!!!!!!!!
 #   date: 日期,表示年月日
 #   time: 时间,表示时分秒
-import datetime
+import datetime#按鼠标中间可以查看
 
 # 1.创建日期对象
+dt=datetime.datetime.now()      #获取当前时间
+dt=datetime.datetime(year=2030,month=2,day=4,hour=10,minute=30,second=40)
+print(dt)
 
 # 2.日期的属性
+print(dt.year,dt.month)
+print(dt.date())
+print(dt.time())
 
 
 # 3. 日期格式的转换
@@ -27,10 +35,14 @@ import datetime
 #   日期字符串 : "2030-02-01 12:30:20"
 #   时间戳 :  1821025084.211286
 
-# 日期对象 <==> 日期字符串
+# 日期对象 <==> 日期字符串!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # strftime: 日期对象 => 日期字符串
 # strptime: 日期字符串 => 日期对象
-
+print(dt.strftime('%Y-%m-%d %H--%M--%S'))
+s="2030-02-01 12:30:20"
+dt2=datetime.datetime.strptime(s,"%Y-%m-%d %H:%M:%S")
+print(dt2)
+print(s)#s和dt2的差别在于，dt2可以调用datetime里面的函数而s不可以
 '''
 > # %y 两位数的年份表示（00-99）
 > # %Y 四位数的年份表示（0000-9999）
@@ -54,23 +66,25 @@ import datetime
 > # %X 本地相应的时间表示
 > # %% %号本身
 '''
-
-# 日期对象 <==> 时间戳 (了解)
-# print(dt.timestamp())  # 1721028409.881082
-# print(datetime.datetime.fromtimestamp(1721028409.881082))
+# 日期对象 <==> 时间戳 (了解)!!!!!!!!!!!!!!!!!!!!!!!!!!!
+print(dt.timestamp())  # 1721028409.881082
+print(datetime.datetime.fromtimestamp(1721028409.881082))
 
 
 # 时间差 timedelta
-d1 = datetime.datetime.now()
-
+# 练习1: 求7天后的日期
+d1 = datetime.datetime(year=2026,month=10,day=14)#现在的时间
+td=datetime.timedelta(days=7)#时间差
+print(d1+td)
 
 # 求2个日期相差多少天
 d2 = datetime.datetime(2030, 10, 10)
 d3 = datetime.datetime(2020, 3, 3)
+diff=d2-d3
+print(diff.days)
 
 
 
-# 练习1: 求7天后的日期
 
 
 
