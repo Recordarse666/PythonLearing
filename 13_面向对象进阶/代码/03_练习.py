@@ -11,6 +11,35 @@
 #        sub(x, y) : 求x-y的结果并返回
 #
 #  不创建对象，分别调用这些方法，然后打印num
+class Number:
+    num = 10
+    @classmethod
+    def add_num(cls):
+        cls.num+=1
 
+    @classmethod
+    def sub_num(cls):
+        cls.num -= 1
 
+    @classmethod
+    def mul_num(cls,n):
+        cls.num*=n
+
+    @classmethod
+    def div_num(cls,n):
+        cls.num/=n
+
+    @staticmethod
+    def add(x,y):
+        return x+y
+
+    @staticmethod
+    def sub(x,y):
+        return x-y
+Number.add_num()
+Number.sub_num()
+Number.mul_num(2)
+Number.div_num(2)
+print(Number.add(3,4))
+print(Number.sub(5,2))
 
