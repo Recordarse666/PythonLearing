@@ -17,7 +17,7 @@ print(p.name, p.age, p.sex)
 # p2 = Person('小黑', 30)
 # print(p2.name, p2.age)
 
-
+print()
 # 特殊属性：了解
 class Dog:
     def __init__(self, name, age):
@@ -30,14 +30,21 @@ class Dog:
 
 d = Dog('旺财', 3)
 
-# print(d.__class__)
+print(d.__class__)
 # print(Dog.__class__)
 print(d.__dict__)  # 字典 {'name': '旺财', 'age': 3}
 
 # d2 = Dog(**{'name': '旺财', 'age': 3})
 # d2 = Dog(name='旺财', age= 3)
 # print(d2.__dict__)
-# print(d.__module__)  # 模块 ‘__main__’
+print(d.__module__)  # 模块 ‘__main__’
+
+# 对象.__dict__	    对象的所有属性，字典形式
+# 对象.__class__	    对象属于哪个类
+# 对象.__module__	定义在哪个模块
+
+
+
 
 # __new__() : 创建对象 (先调用)
 # __init__() : 初始化（然后调用）
@@ -68,3 +75,9 @@ print(n1 + n2)  # 7
 
 print([n1, n2])
 
+# 魔法方法	            触发时机
+# __init__	            创建对象时
+# __add__	            用 + 时
+# __sub__	            用 - 时
+# __str__ / __repr__	print(对象) 时
+# __del__	            对象销毁时
