@@ -19,9 +19,9 @@ for i in range(1,101):
 print(sum)
 # 【题3】猜数字游戏：程序设定一个1~100的数，用户循环猜，大了提示大了，小了提示小了，猜中结束
 #
- import random
- num=random.randint(1,100)
- while True:
+import random
+num=random.randint(1,100)
+while True:
      num2=int(input("请输入一个数字："))
      if num2==num:
          print('恭喜你，猜对了')
